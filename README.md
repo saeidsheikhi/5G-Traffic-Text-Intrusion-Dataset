@@ -1,4 +1,4 @@
-# 5g-traffic-text-intrusion-dataset
+# 5G-Traffic-Text-Intrusion-Dataset
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A public 5G network traffic dataset, pre-processed and formatted as text sequences. It is specifically designed for training and evaluating Large Language Models (LLMs), Transformers, and other NLP models for intrusion detection research.
