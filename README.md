@@ -13,7 +13,7 @@ This dataset was created and used in the research published in the paper(s) list
 - [File Structure](#file-structure)
 - [How to Cite](#how-to-cite)
 - [License](#license)
-
+  
 ## Related Publications
 
 The primary way to give credit for this dataset is by citing the associated peer-reviewed papers, particularly the primary paper for which this data was formatted:
@@ -52,7 +52,7 @@ This dataset is designed to be used with NLP libraries like Hugging Face Transfo
 * Python 3.8+
 * Pandas
 * PyTorch or TensorFlow
-* Hugging Face `transformers` and `datasets` libraries
+* Hugging Face `transformers` library
 
 **Example Usage:**
 ```python
@@ -64,7 +64,8 @@ df_train1 = pd.read_csv('data/Train_subset_1.csv')
 df_train2 = pd.read_csv('data/Train_subset_2.csv')
 df_train = pd.concat([df_train1, df_train2], ignore_index=True)
 
-# Convert to a Hugging Face Dataset object for easy use with LLMs
+# For easy use with the Hugging Face ecosystem, convert the pandas DataFrame
+# to a Dataset object. This is a recommended step for training.
 hf_dataset = Dataset.from_pandas(df_train)
 
 print("Dataset loaded and converted successfully!")
@@ -77,15 +78,11 @@ print(hf_dataset[0])
 
 ## File Structure
 
-The data files should be hosted on a service like Google Drive, Kaggle, or using Git LFS.
-
-**Download Link:** [**INSERT YOUR DOWNLOAD LINK HERE**]
-
-The data is provided in multiple CSV files:
+The data is provided in multiple CSV files located within the `data/` directory of this repository:
 * `Train_subset_1.csv` & `Train_subset_2.csv`: These contain training data formatted for Transformers. They can be used separately or combined.
 * `Test_Data.csv`: A unified test set for evaluating the final model.
 
-The repository should be structured as follows:
+The repository is structured as follows:
 ```
 .
 ├── data/
@@ -115,4 +112,3 @@ Please cite the relevant papers listed in the [Related Publications](#related-pu
 ## License
 
 This dataset is licensed under the **MIT License**. See the `LICENSE` file for more details.
-
